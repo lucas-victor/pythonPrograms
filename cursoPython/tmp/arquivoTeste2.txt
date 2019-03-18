@@ -1,0 +1,19 @@
+teste apagando arquivo com w+ 
+adicionando linhas novas no arquivo. 
+segunda linha do arquivo 
+terceira linha do arquivo.
+adicionando linhas novas no arquivo. 
+segunda linha do arquivo 
+terceira linha do arquivo.
+adicionando linhas novas no arquivo. 
+segunda linha do arquivo 
+terceira linha do arquivo.
+adicionando linhas novas no arquivo. 
+segunda linha do arquivo 
+terceira linha do arquivo.
+adicionando linhas novas no arquivo. 
+segunda linha do arquivo 
+terceira linha do arquivo.
+adicionando linhas novas no arquivo. 
+segunda linha do arquivo 
+terceira linha do arquivo.

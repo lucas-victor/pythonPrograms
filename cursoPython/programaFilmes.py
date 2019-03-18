@@ -47,8 +47,8 @@ def main():
             print('Opcao inválida')
 def existe():
     """Verifica se o arquivo filmes.txt existe"""
-    if os.path.isfile('data/filmes.txt'):
-        return 'data/filmes.txt'
+    if os.path.isfile('.tmp/filmes.txt'):
+        return '.tmp/filmes.txt'
     else:
         return ''
 
