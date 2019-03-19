@@ -1,0 +1,27 @@
+
+Encontrando um arquivo disco
+
+Abrir um arquivo requer que você, como programador, e o Python entre em acordo sobre onde está o arquivo no seu disco.
+A maneira que os arquivos são localizados no disco e através do seu caminho (path).
+Você pode pensar em nome_arquivo como o primeiro nome do arquivo e o caminho como o nome completo.
+ Por exemplo em um Mac se o usuário hofstadter salvar o arquivo penny.txt no seu diretório (home directory)
+ o caminho é /Users/hofstadter/penny.txt. No Linux caminho poderia ser /home/hofstadter/penny.txt .
+ No computadores com o sistema operacional Windows o caminho parece um pouco diferente, mas os princípios são os mesmos.
+ Por exemplo no Windows o caminho poderia ser C:\Users\hofstadter\My Documents\penny.txt.
+
+Você também pode acessar arquivos em pastas (folders), também chamados de diretórios (directories), no seu diretório adicionando
+um barra e o nome da pasta. Por exemplo, suponha que em um Mac o usuário hofstadter` armazena arquivos para
+usar com o editor PyCharm na pasta MAC2166, que por sua vez está dentro da pasta ProjetosPyCharm. O nome completo
+de um arquivo ``penny.py armazenado na pasta MAC2166 seria /Users/hofstadter/ProjetosPyCharm/MAC2166/penny.py
+
+Aqui está uma regra importante para ser lembrada: se o seu arquivo de dados e o seu programa Python
+estão no mesmo diretório você pode usar simplesmente o nome do arquivo. open('penny.txt','r') .
+Se o seu arquivo de dados e o seu programa Python estão em diretórios diferentes então você deve usar o
+caminho até o arquivo open('/Users/hofstadter/penny.txt','r').
+Abrindo e fechando arquivos
+
+Como exemplo, suponha que temos um texto chamado qbdata.txt
+que contem os dados a seguir representando estatísticas sobre o quarterbacks da NFL.
+Apesar de ser possível digitarmos esses dados cada vez que tivéssemos que usá-los, podemos imaginar que
+além de tomar bastante tempo fazer isso também seria uma fonte de erros. Além disso, é provável que
+ houvesse dados de outros quarterbacks e outros anos. O formato de arquivo de dados é o seguinte:
