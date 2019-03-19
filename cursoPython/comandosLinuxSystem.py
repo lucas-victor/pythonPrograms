@@ -1,6 +1,5 @@
 import os
 
-
 os.system("ls -lathr")
 
 os.system('echo "Foi exibido o comando ls -lathr..........................."')

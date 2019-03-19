@@ -11,7 +11,7 @@ while True:
     print('----------------------------------------------------------------')
     print(f'################## A tabuada do número {r} é: ##################')
 
-    for i in range(1,11):
+    for i in range(1, 11):
         n1 = r * i
         print(f'{r} x {i} = {n1}')
 
