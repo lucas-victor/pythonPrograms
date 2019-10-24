@@ -1,0 +1,306 @@
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Conector
+
+---------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+2018-12-12 16:08:01,059 INFO  [cnn.jms.OnlineConnector] [] [OS9bd3d527] Mensagem recebida na entrada do conector. JMS ID:<178040.1544638080968.0>; Conteudo XML:
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<prov:ProvisionerOS xmlns:prov="http://www.oi.net.br/ProvisionerIn" externalId="CN02_CT02" priority="5">
+    <ServiceElements>
+        <ServiceElement code="ATV_H9105">
+            <Parameters>
+                <Parameter name="Action" value="Instalar"/>
+                <Parameter name="IMSI" value="724312929894498"/>
+                <Parameter name="IMSIAntigo" value="724312922881739"/>
+                <Parameter name="MSISDN" value="5541984006452"/>
+                <Parameter name="HLR" value="29"/>
+                <Parameter name="HLRAntigo" value="29"/>
+                <Parameter name="KI" value="001E64A746F5603475CBEF6C9E84C5ED286"/>
+                <Parameter name="PRE" value="POS"/>
+                <Parameter name="NovoKI" value="00102E25E287DA4C2F9BE8B55ECDE172FCF"/>
+                <Parameter name="MSISDNNOVO" value="55"/>
+                <Parameter name="IMSINOVO" value="724312929894498"/>
+                <Parameter name="GTT" value="04"/>
+                <Parameter name="ESBIdElementoSiebel" value="1-1AUOCX44"/>
+                <Parameter name="ESBTipoOS" value="Online"/>
+                <Parameter name="TipoDeAutenticacao" value="1"/>
+                <Parameter name="TipoDeAutenticacaoAntiga" value="1"/>
+                <Parameter name="PARM1" value="895531292997125898"/>
+                <Parameter name="PARM2" value="895531292990106457"/>
+                <Parameter name="PARM3" value="724312929894498"/>
+                <Parameter name="PARM4" value="00102E25E287DA4C2F9BE8B55ECDE172FCF"/>
+            </Parameters>
+        </ServiceElement>
+    </ServiceElements>
+</prov:ProvisionerOS>
+
+2018-12-12 16:08:01,060 INFO  [cnn.jms.OnlineConnector] [CN02_CT02] [OS9bd3d527] OS obtida pelo parser: Id externo=CN02_CT02, Prioridade=5, Id correlacao=null, Id conector=m2m, Elementos=[ATV_H9105].
+2018-12-12 16:08:01,060 INFO  [cnn.jms.OnlineConnector] [CN02_CT02] [OS9bd3d527] A OS OSImpl[id=a39aa80a7f00000163f44b1d9bd3d527,id externo=CN02_CT02,prioridade=5] ja possui id.
+2018-12-12 16:08:01,103 INFO  [cnn.jms.OnlineConnector] [CN02_CT02] [OS9bd3d527] OS enviada para aprovisionador. 
+2018-12-12 16:08:01,103 INFO  [cnn.jms.OnlineConnector] [CN02_CT02] [OS9bd3d527] Realizando coleta dos indicadores.
+2018-12-12 16:08:01,103 INFO  [cnn.jms.OnlineConnector] [CN02_CT02] [OS9bd3d527] Coleta dos indicadores realizada.
+2018-12-12 16:08:02,698 INFO  [cnn.jms.OnlineConnectorReplyer] [] [OS] Resposta de aprovisionamento recebida pelo conector: ObjectMessage[ID:<178040.1544638082658.0>,ProvisioningReplyImpl[Elemento=ATV_H9105,Tipo=Success,Id Externo=CN02_CT02]]
+2018-12-12 16:08:02,720 INFO  [cnn.jms.OnlineConnectorReplyer] [CN02_CT02] [OS9bd3d527] Resposta enviada para a saida do conector (sis.m2m.OnlineConnectorOutQueue). XML enviado:
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<tns:ProvisionerResponse xmlns:tns="http://www.oi.net.br/ProvisionerOut">
+    <ExternalId>CN02_CT02</ExternalId>
+    <ServiceElement code="ATV_H9105">
+        <Parameters>
+            <Parameter name="PARM2" value="895531292990106457"/>
+            <Parameter name="PARM3" value="724312929894498"/>
+            <Parameter name="Action" value="Instalar"/>
+            <Parameter name="PRE" value="POS"/>
+            <Parameter name="OCCF_UDR" value="5541984952057"/>
+            <Parameter name="MSISDN" value="5541984006452"/>
+            <Parameter name="PARM1" value="895531292997125898"/>
+            <Parameter name="AC_SUB" value="2"/>
+            <Parameter name="ALG_ID" value="1"/>
+            <Parameter name="GTT" value="90"/>
+            <Parameter name="TipoDeAutenticacao" value="1"/>
+            <Parameter name="PARM4" value="00102E25E287DA4C2F9BE8B55ECDE172FCF"/>
+            <Parameter name="GTHLR" value="550310002015"/>
+            <Parameter name="HLR" value="29"/>
+            <Parameter name="MSISDNNOVO" value="55"/>
+            <Parameter name="OPERATOR_SERVICE_NAME" value="S07DFE"/>
+            <Parameter name="NewRoute" value="99999"/>
+            <Parameter name="TipoDeAutenticacaoAntiga" value="1"/>
+            <Parameter name="NovoKI" value="00102E25E287DA4C2F9BE8B55ECDE172FCF"/>
+            <Parameter name="IMSI" value="724312929894498"/>
+            <Parameter name="KI" value="001E64A746F5603475CBEF6C9E84C5ED286"/>
+            <Parameter name="QOSP_UDR" value="DADOS-04"/>
+            <Parameter name="CHARG_UDR" value="normal"/>
+            <Parameter name="KEY_ID" value="001"/>
+            <Parameter name="ESBTipoOS" value="Online"/>
+            <Parameter name="ESBIdElementoSiebel" value="1-1AUOCX44"/>
+            <Parameter name="KI_ENCRYPT" value="02E25E287DA4C2F9BE8B55ECDE172FCF"/>
+            <Parameter name="NumberType" value="4"/>
+            <Parameter name="GTT_OS" value="04"/>
+            <Parameter name="ROU_UDR" value="100"/>
+            <Parameter name="IMSINOVO" value="724312929894498"/>
+            <Parameter name="TipoAutenticacao" value="1"/>
+            <Parameter name="IMSIAntigo" value="724312922881739"/>
+            <Parameter name="HLRAntigo" value="29"/>
+        </Parameters>
+    </ServiceElement>
+    <ServiceElementResponses type="Success">
+        <ServiceElementResponse executionTimestamp="2018-12-12 16:08:02">
+            <Description><![CDATA[UDR02:Sucesso;||;LSMS01:Executado com Sucesso]]></Description>
+            <NetworkElement>UDR02;||;LSMS01</NetworkElement>
+        </ServiceElementResponse>
+    </ServiceElementResponses>
+</tns:ProvisionerResponse>
+ 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Aprovisionamento
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+2018-12-12 16:08:01,333 INFO  [pro.brk.ProvisioningBroker] [OS.E] A OS OSImpl[id=a39aa80a7f00000163f44b1d9bd3d527,id externo=CN02_CT02,prioridade=5] ja possui id.
+2018-12-12 16:08:01,333 INFO  [pro.brk.ProvisioningBroker] [OS9bd3d527.E] Uma OS de Id externo CN02_CT02 obteve o id a39aa80a7f00000163f44b1d9bd3d527.
+2018-12-12 16:08:01,380 INFO  [pro.wfl.TaskExecutorEngine] [OS9bd3d527.E0] Definido o workflow "DefaultWorkFlow" para o servico de aprovisionamento "ATV_H9105".
+2018-12-12 16:08:01,393 INFO  [pro.brk.ProvisioningBroker] [OS9bd3d527.E] Sequencia encaminhada para fila default de aprovisionamento.
+2018-12-12 16:08:01,412 INFO  [pro.wfl.TaskExecutorEngine] [OS9bd3d527.E0] Executando task CompatibilityParametersTask
+2018-12-12 16:08:01,424 INFO  [pro.wfl.task.CompatibilityParametersTask] [OS9bd3d527.E0] Nenhum parametro criado, pois nao existe mapeamento para o servico e parametros da OS
+2018-12-12 16:08:01,424 INFO  [pro.wfl.TaskExecutorEngine] [OS9bd3d527.E0] Executando task ValidationParametersRequiredTask
+2018-12-12 16:08:01,436 INFO  [pro.wfl.TaskExecutorEngine] [OS9bd3d527.E0] Executando task ValidationTask
+2018-12-12 16:08:01,450 INFO  [pro.wfl.task.ValidationTask] [OS9bd3d527.E0] Elemento ATV_H9105 configurado para aplicar as seguintes regras de validacao dos valores dos parametros: {CnHlrAntigoENovoValidation, ImsiValidationNotMandatory}.
+2018-12-12 16:08:01,450 INFO  [pro.rul.enrichment.CnHlrAntigoENovoValidation] [OS9bd3d527.E0] Regra aplicada com sucesso.  HLR = '29', HLRAntigo = '29'.
+2018-12-12 16:08:01,450 INFO  [pro.rul.enrichment.ImsiValidationNotMandatory] [OS9bd3d527.E0] Elemento de servico ATV_H9105 O valor do IMSI possui 15 caracteres numericos
+2018-12-12 16:08:01,450 INFO  [pro.wfl.task.ValidationTask] [OS9bd3d527.E0] Elemento ATV_H9105 com valor de parametros validados. Parametros: {PARM2=895531292990106457, PARM3=724312929894498, Action=Instalar, PRE=POS, MSISDN=5541984006452, PARM1=895531292997125898, GTT=04, TipoDeAutenticacao=1, ESBTipoOS=Online, PARM4=00102E25E287DA4C2F9BE8B55ECDE172FCF, HLR=29, MSISDNNOVO=55, ESBIdElementoSiebel=1-1AUOCX44, TipoDeAutenticacaoAntiga=1, NovoKI=00102E25E287DA4C2F9BE8B55ECDE172FCF, IMSINOVO=724312929894498, IMSI=724312929894498, IMSIAntigo=724312922881739, HLRAntigo=29, KI=001E64A746F5603475CBEF6C9E84C5ED286}.
+2018-12-12 16:08:01,450 INFO  [pro.wfl.TaskExecutorEngine] [OS9bd3d527.E0] Executando task EnrichmentTask
+2018-12-12 16:08:01,452 INFO  [pro.wfl.task.EnrichmentTask] [OS9bd3d527.E0] Elemento ATV_H9105 configurado para aplicar as seguintes regras de enriquecimento: {GttPrefixoMsisdn, TipoDeAutenticacao, OperatorServiceName, AcSub, AlgId, ChargFromPreUdr, RouUdr, OccfFromCN, QospUdr, NovoKiEncrypt, NewRouteFromServiceCode, GtHlr, NumberTypeFromServiceCode}.
+2018-12-12 16:08:01,534 INFO  [pro.rul.enrichment.GttPrefixoMsisdn] [OS9bd3d527.E0] Regra de enriquecimento aplicada com sucesso. GTT = '90'
+2018-12-12 16:08:01,536 INFO  [pro.rul.enrichment.TipoDeAutenticacao] [OS9bd3d527.E0] Elemento de servico ATV_H9105 ja possui o parametro TipoAutenticacao ('1').
+2018-12-12 16:08:01,536 INFO  [pro.rul.enrichment.OperatorServiceName] [OS9bd3d527.E0] Regra de enriquecimento aplicada com sucesso. OPERATOR_SERVICE_NAME = 'S07DFE'
+2018-12-12 16:08:01,536 INFO  [pro.rul.enrichment.AcSub] [OS9bd3d527.E0] Regra de enriquecimento aplicada com sucesso. AC_SUB = '2'
+2018-12-12 16:08:01,536 INFO  [pro.rul.enrichment.AlgId] [OS9bd3d527.E0] Regra de enriquecimento aplicada com sucesso. ALG_ID = '1'
+2018-12-12 16:08:01,536 INFO  [pro.rul.enrichment.ChargFromPreUdr] [OS9bd3d527.E0] Regra aplicada com sucesso. CHARG_UDR = 'normal'.
+2018-12-12 16:08:01,839 INFO  [pro.rul.enrichment.RouUdr] [OS9bd3d527.E0] Regra de enriquecimento aplicada com sucesso. ROU_UDR = '100'
+2018-12-12 16:08:01,839 INFO  [pro.rul.enrichment.OccfFromCN] [OS9bd3d527.E0] Regra de enriquecimento aplicada com sucesso. OCCF_UDR = '5541984952057'
+2018-12-12 16:08:01,839 INFO  [pro.rul.enrichment.QospUdr] [OS9bd3d527.E0] Regra de enriquecimento aplicada com sucesso. QOSP_UDR = 'DADOS-04'
+2018-12-12 16:08:01,840 INFO  [pro.rul.enrichment.NovoKiEncrypt] [OS9bd3d527.E0] Regra aplicada com sucesso. KEY_ID = '001', KI_ENCRYPT = '02E25E287DA4C2F9BE8B55ECDE172FCF'
+2018-12-12 16:08:01,841 INFO  [pro.rul.enrichment.NewRouteFromServiceCode] [OS9bd3d527.E0] Regra de enriquecimento aplicada com sucesso. NewRoute = '99999'
+2018-12-12 16:08:01,841 INFO  [pro.rul.enrichment.GtHlr] [OS9bd3d527.E0] Regra de enriquecimento aplicada com sucesso. GTHLR = '550310002015'
+2018-12-12 16:08:01,841 INFO  [pro.rul.enrichment.NumberTypeFromServiceCode] [OS9bd3d527.E0] Regra de enriquecimento aplicada com sucesso. NumberType = '4'
+2018-12-12 16:08:01,841 INFO  [pro.wfl.task.EnrichmentTask] [OS9bd3d527.E0] Elemento ATV_H9105 enriquecido. Parametros: {PARM2=895531292990106457, PARM3=724312929894498, Action=Instalar, PRE=POS, OCCF_UDR=5541984952057, MSISDN=5541984006452, PARM1=895531292997125898, AC_SUB=2, ALG_ID=1, GTT=90, TipoDeAutenticacao=1, PARM4=00102E25E287DA4C2F9BE8B55ECDE172FCF, GTHLR=550310002015, HLR=29, MSISDNNOVO=55, OPERATOR_SERVICE_NAME=S07DFE, NewRoute=99999, TipoDeAutenticacaoAntiga=1, NovoKI=00102E25E287DA4C2F9BE8B55ECDE172FCF, IMSI=724312929894498, KI=001E64A746F5603475CBEF6C9E84C5ED286, QOSP_UDR=DADOS-04, CHARG_UDR=normal, KEY_ID=001, ESBTipoOS=Online, ESBIdElementoSiebel=1-1AUOCX44, KI_ENCRYPT=02E25E287DA4C2F9BE8B55ECDE172FCF, NumberType=4, GTT_OS=04, ROU_UDR=100, IMSINOVO=724312929894498, TipoAutenticacao=1, IMSIAntigo=724312922881739, HLRAntigo=29}.
+2018-12-12 16:08:01,841 INFO  [pro.wfl.TaskExecutorEngine] [OS9bd3d527.E0] Executando task RouterTask
+2018-12-12 16:08:01,844 INFO  [pro.wfl.task.RouterTask] [OS9bd3d527.E0] Iniciando distribuicao do elemento ATV_H9105. Precedencia=9, Descricao=Modificação nos dados do assinante (Dependência entre serviços de modificação).
+2018-12-12 16:08:01,860 INFO  [pro.wfl.task.RouterTask] [OS9bd3d527.E0] Roteamento: ESA=ATV_H9105 (AdvancedDistributionRule=), ESR=TrocaChipUdrNokia, Regra=ImsiChangeUdrRouter, Destino=UDR02.
+2018-12-12 16:08:01,860 INFO  [pro.wfl.task.RouterTask] [OS9bd3d527.E0] Roteamento: ESA=ATV_H9105 (AdvancedDistributionRule=), ESR=RemoverAssinanteTrocaChipSmartKeyHuawei, Regra=Lsms, Destino=LSMS01.
+2018-12-12 16:08:01,925 INFO  [pro.wfl.task.RouterTask] [OS9bd3d527.E0] Agregador criado para o elemento: ATV_H9105. ID: 355. respostas esperadas: 2.
+2018-12-12 16:08:01,925 INFO  [pro.brk.ProvisioningBroker] [OS9bd3d527.E] Enviando sequencia de elementos de rede: Id=0 Prior=5 Destino=UDR02 Servicos=[TrocaChipUdrNokia,NOT_EXECUTED].
+2018-12-12 16:08:01,925 INFO  [pro.brk.ProvisioningBroker] [OS9bd3d527.E] Enviando sequencia de elementos de rede: Id=1 Prior=5 Destino=LSMS01 Servicos=[RemoverAssinanteTrocaChipSmartKeyHuawei,NOT_EXECUTED].
+2018-12-12 16:08:01,925 INFO  [pro.brk.ProvisioningBroker] [OS9bd3d527.E] Envio das sequencias de elementos de servico de rede para fila da entrada da rede concluida. 
+2018-12-12 16:08:02,476 INFO  [pro.wfl.TaskExecutorEngine] [OS9bd3d527.E0] Executando task RouterTask
+2018-12-12 16:08:02,477 INFO  [pro.brk.Replier] [OS9bd3d527.E0] Resposta de rede com agregacao processada. Id do item de agregacao=360, Tempo de execucao=122 ms.
+2018-12-12 16:08:02,485 INFO  [pro.brk.Replier] [OS9bd3d527.E0] Resposta de rede com agregacao processada. Id do item de agregacao=359, Tempo de execucao=104 ms.
+2018-12-12 16:08:02,496 INFO  [pro.wfl.TaskExecutorEngine] [OS9bd3d527.E0] Executando task RouterTask
+2018-12-12 16:08:02,536 INFO  [pro.wfl.task.RouterTask] [OS9bd3d527.E0] Resposta com agregacao recebida: Elemento=ATV_H9105, Servico de rede=RemoverAssinanteTrocaChipSmartKeyHuawei, Elemento de rede=LSMS01, AggregateId=355, AggregateItemId=360, Respostas=1/2.
+2018-12-12 16:08:02,612 INFO  [pro.wfl.task.RouterTask] [OS9bd3d527.E0] Resposta com agregacao recebida: Elemento=ATV_H9105, Servico de rede=TrocaChipUdrNokia, Elemento de rede=UDR02, AggregateId=355, AggregateItemId=359, Respostas=2/2.
+2018-12-12 16:08:02,612 INFO  [pro.wfl.task.RouterTask] [OS9bd3d527.E0] Agregacao concluida e convertida em resposta. Elemento=ATV_H9105, AggregateId=355.
+2018-12-12 16:08:02,631 INFO  [pro.wfl.task.RouterTask] [OS9bd3d527.E0] Finalizando a agregacao. Elemento=ATV_H9105, AggregateId=355.
+2018-12-12 16:08:02,631 INFO  [pro.wfl.task.RouterTask] [OS9bd3d527.E0] Excluindo agregacao. Id=355.
+2018-12-12 16:08:02,655 INFO  [pro.wfl.ProvisioningSender] [OS9bd3d527.E0] OUT- ProvisioningReplyImpl[Elemento=ATV_H9105,Tipo=Success,Id Externo=CN02_CT02], dest=Conector m2m, Parametros={PARM2=895531292990106457, PARM3=724312929894498, Action=Instalar, PRE=POS, OCCF_UDR=5541984952057, MSISDN=5541984006452, PARM1=895531292997125898, AC_SUB=2, ALG_ID=1, GTT=90, TipoDeAutenticacao=1, PARM4=00102E25E287DA4C2F9BE8B55ECDE172FCF, GTHLR=550310002015, HLR=29, MSISDNNOVO=55, OPERATOR_SERVICE_NAME=S07DFE, NewRoute=99999, TipoDeAutenticacaoAntiga=1, NovoKI=00102E25E287DA4C2F9BE8B55ECDE172FCF, IMSI=724312929894498, KI=001E64A746F5603475CBEF6C9E84C5ED286, QOSP_UDR=DADOS-04, CHARG_UDR=normal, KEY_ID=001, ESBTipoOS=Online, ESBIdElementoSiebel=1-1AUOCX44, KI_ENCRYPT=02E25E287DA4C2F9BE8B55ECDE172FCF, NumberType=4, GTT_OS=04, ROU_UDR=100, IMSINOVO=724312929894498, TipoAutenticacao=1, IMSIAntigo=724312922881739, HLRAntigo=29}.
+2018-12-12 16:08:02,655 INFO  [pro.wfl.ProvisioningSender] [OS9bd3d527.E0] Resposta do servico: Plataforma=UDR02, ESR=TrocaChipUdrNokia, Executado em=2018-12-12 16:08:02, Traducao=Sucesso  
+2018-12-12 16:08:02,655 INFO  [pro.wfl.ProvisioningSender] [OS9bd3d527.E0] Resposta do servico: Plataforma=LSMS01, ESR=RemoverAssinanteTrocaChipSmartKeyHuawei, Executado em=2018-12-12 16:08:02, Traducao=Executado com Sucesso  
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Rede
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+2018-12-12 16:08:02,120 INFO  [net.brk.NetworkIn] [OS9bd3d527.E SEQ0.E P ] Mensagem recebida no ponto unico de entrada da rede: ObjectMessage[ID:<178040.1544638081930.0>,NetworkServiceElementSequenceImpl[id externo=CN02_CT02,os=a39aa80a7f00000163f44b1d9bd3d527,id=0,prioridade=5,elemento de rede=UDR02,servicos de rede=[TrocaChipUdrNokia,NOT_EXECUTED]]].
+2018-12-12 16:08:02,130 INFO  [net.brk.NetworkConnectionImpl] [OS9bd3d527.E SEQ0.E P sisserver.UDR02.0] Mensagem recebida na entrada da rede ObjectMessage[ID:<178040.1544638082124.0>,NetworkServiceElementSequenceImpl[id externo=CN02_CT02,os=a39aa80a7f00000163f44b1d9bd3d527,id=0,prioridade=5,elemento de rede=UDR02,servicos de rede=[TrocaChipUdrNokia,NOT_EXECUTED]]].
+2018-12-12 16:08:02,131 INFO  [net.brk.NetworkConnectionImpl] [OS9bd3d527.E SEQ0.E P sisserver.UDR02.0] Sequencia retirada da fila: id=0, prior=5, destino=UDR02, servicos=[TrocaChipUdrNokia,NOT_EXECUTED].
+2018-12-12 16:08:02,131 INFO  [net.brk.NetworkBroker] [OS9bd3d527.E SEQ0.E P sisserver.UDR02.0] Status da conexao alterado para RUNNING.
+2018-12-12 16:08:02,135 INFO  [net.brk.NetworkIn] [OS9bd3d527.E SEQ1.E P ] Mensagem recebida no ponto unico de entrada da rede: ObjectMessage[ID:<178040.1544638081933.0>,NetworkServiceElementSequenceImpl[id externo=CN02_CT02,os=a39aa80a7f00000163f44b1d9bd3d527,id=1,prioridade=5,elemento de rede=LSMS01,servicos de rede=[RemoverAssinanteTrocaChipSmartKeyHuawei,NOT_EXECUTED]]].
+2018-12-12 16:08:02,140 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] OS a39aa80a7f00000163f44b1d9bd3d527 ESR TrocaChipUdrNokia enviado para traducao.
+2018-12-12 16:08:02,157 INFO  [net.brk.NetworkConnectionImpl] [OS9bd3d527.E SEQ1.E P sisserver.LSMS01.0] Mensagem recebida na entrada da rede ObjectMessage[ID:<178040.1544638082145.0>,NetworkServiceElementSequenceImpl[id externo=CN02_CT02,os=a39aa80a7f00000163f44b1d9bd3d527,id=1,prioridade=5,elemento de rede=LSMS01,servicos de rede=[RemoverAssinanteTrocaChipSmartKeyHuawei,NOT_EXECUTED]]].
+2018-12-12 16:08:02,157 INFO  [net.brk.NetworkConnectionImpl] [OS9bd3d527.E SEQ1.E P sisserver.LSMS01.0] Sequencia retirada da fila: id=1, prior=5, destino=LSMS01, servicos=[RemoverAssinanteTrocaChipSmartKeyHuawei,NOT_EXECUTED].
+2018-12-12 16:08:02,157 INFO  [net.brk.NetworkBroker] [OS9bd3d527.E SEQ1.E P sisserver.LSMS01.0] Status da conexao alterado para RUNNING.
+2018-12-12 16:08:02,167 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] OS a39aa80a7f00000163f44b1d9bd3d527 ESR RemoverAssinanteTrocaChipSmartKeyHuawei enviado para traducao.
+2018-12-12 16:08:02,188 INFO  [net.wfl.NetworkEnricher] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] Nenhuma regra de enriquecimento encontrada para o elemento de servico de rede RemoverAssinanteTrocaChipSmartKeyHuawei. 
+2018-12-12 16:08:02,188 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] ESR RemoverAssinanteTrocaChipSmartKeyHuawei configurado para aplicar a seguinte regra de execucao de comandos: DefaultExecution
+2018-12-12 16:08:02,189 INFO  [net.wfl.NetworkEnricher] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Nenhuma regra de enriquecimento encontrada para o elemento de servico de rede TrocaChipUdrNokia. 
+2018-12-12 16:08:02,189 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] ESR TrocaChipUdrNokia configurado para aplicar a seguinte regra de execucao de comandos: DefaultExecution
+2018-12-12 16:08:02,189 INFO  [net.wfl.Translator] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] Identificando sequencias de comandos para ESR RemoverAssinanteTrocaChipSmartKeyHuawei.
+2018-12-12 16:08:02,189 INFO  [net.wfl.Translator] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] ESR RemoverAssinanteTrocaChipSmartKeyHuawei: aplicando regra de traducao RegularTranslation.
+2018-12-12 16:08:02,189 INFO  [net.wfl.Translator] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Identificando sequencias de comandos para ESR TrocaChipUdrNokia.
+2018-12-12 16:08:02,190 INFO  [net.wfl.Translator] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] ESR TrocaChipUdrNokia: aplicando regra de traducao RegularTranslation.
+2018-12-12 16:08:02,205 INFO  [net.wfl.Translator] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] Antes Trad: ESR RemoverAssinanteTrocaChipSmartKeyHuawei: seq=0, comando=<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:smar="http://www.huawei.com/AXIS/SmartKey"><soapenv:Header /><soapenv:Body><smar:RMV_USR><USERNAME>{username}</USERNAME><PASSWORD>{password}</PASSWORD><Number>{MSISDN}</Number><IMSI></IMSI></smar:RMV_USR></soapenv:Body></soapenv:Envelope>.
+2018-12-12 16:08:02,205 INFO  [net.wfl.Translator] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] Antes Trad: ESR RemoverAssinanteTrocaChipSmartKeyHuawei: seq=1, comando=<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:smar="http://www.huawei.com/AXIS/SmartKey"><soapenv:Header /><soapenv:Body><smar:RMV_USR><USERNAME>{username}</USERNAME><PASSWORD>{password}</PASSWORD><Number></Number><IMSI>{IMSIAntigo}</IMSI></smar:RMV_USR></soapenv:Body></soapenv:Envelope>.
+2018-12-12 16:08:02,205 INFO  [net.wfl.Translator] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] Antes Trad: ESR RemoverAssinanteTrocaChipSmartKeyHuawei: seq=2, comando=<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:smar="http://www.huawei.com/AXIS/SmartKey"><soapenv:Header /><soapenv:Body><smar:RMV_USR><USERNAME>{username}</USERNAME><PASSWORD>{password}</PASSWORD><Number></Number><IMSI>{IMSINOVO}</IMSI></smar:RMV_USR></soapenv:Body></soapenv:Envelope>.
+2018-12-12 16:08:02,205 INFO  [net.rul.commandexecution.DefaultExecution] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] Aplicando regra de execucao de comandos no ESR RemoverAssinanteTrocaChipSmartKeyHuawei,NOT_EXECUTED
+2018-12-12 16:08:02,205 INFO  [net.wfl.AdapterCommunicator] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] Comando enviado para o adaptador soap.Lsms02Adapter.
+2018-12-12 16:08:02,220 INFO  [net.wfl.Translator] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Antes Trad: ESR TrocaChipUdrNokia: seq=0, comando=<spml:deleteRequest xmlns:spml="urn:siemens:names:prov:gw:SPML:2:0" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><version>SUBSCRIBER_v10</version><objectclass>Subscriber</objectclass><identifier alias="imsi" xsi:type="subscriber:SubscriberIdentifier">{IMSI}</identifier></spml:deleteRequest>.
+2018-12-12 16:08:02,221 INFO  [net.wfl.Translator] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Antes Trad: ESR TrocaChipUdrNokia: seq=1, comando=<spml:addRequest returnResultingObject="none" execution="synchronous" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0" xmlns:spml="urn:siemens:names:prov:gw:SPML:2:0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><version>SUBSCRIBER_v10</version><object xsi:type="subscriber:Subscriber"><auc><imsi>{IMSI}</imsi><encKey>{KI_ENCRYPT}</encKey><algoId>{ALG_ID}</algoId><kdbId>{KEY_ID}</kdbId><acsub>{AC_SUB}</acsub></auc></object></spml:addRequest>.
+2018-12-12 16:08:02,221 INFO  [net.wfl.Translator] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Antes Trad: ESR TrocaChipUdrNokia: seq=2, comando=<spml:changeIdRequest returnResultingObject="none" xmlns:spml="urn:siemens:names:prov:gw:SPML:2:0" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0"><version>SUBSCRIBER_v10</version><objectclass>Subscriber</objectclass><oldId alias="imsi" xsi:type="subscriber:SubscriberSwapIdentifier" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">{IMSIAntigo}</oldId><newId alias="imsi" xsi:type="subscriber:SubscriberSwapIdentifier" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">{IMSI}</newId></spml:changeIdRequest>.
+2018-12-12 16:08:02,221 INFO  [net.wfl.Translator] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Antes Trad: ESR TrocaChipUdrNokia: seq=3, comando=<spml:deleteRequest xmlns:spml="urn:siemens:names:prov:gw:SPML:2:0" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><version>SUBSCRIBER_v10</version><objectclass>Subscriber</objectclass><identifier alias="imsi" xsi:type="subscriber:SubscriberIdentifier">{IMSIAntigo}</identifier></spml:deleteRequest>.
+2018-12-12 16:08:02,221 INFO  [net.wfl.Translator] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Antes Trad: ESR TrocaChipUdrNokia: seq=4, comando=<spml:modifyRequest returnResultingObject="none" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0" xmlns:spml="urn:siemens:names:prov:gw:SPML:2:0"><version>SUBSCRIBER_v10</version><objectclass>Subscriber</objectclass><identifier alias="imsi" xsi:type="subscriber:SubscriberIdentifier">{IMSI}</identifier><modification operation="addorset"><valueObject xsi:type="subscriber:HLR"><csFallback><mtrr>true</mtrr></csFallback></valueObject></modification></spml:modifyRequest>.
+2018-12-12 16:08:02,221 INFO  [net.wfl.Translator] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Antes Trad: ESR TrocaChipUdrNokia: seq=5, comando=<spml:modifyRequest returnResultingObject="none" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0" xmlns:spml="urn:siemens:names:prov:gw:SPML:2:0"><version>SUBSCRIBER_v10</version><objectclass>Subscriber</objectclass><identifier alias="imsi" xsi:type="subscriber:SubscriberIdentifier">{IMSI}</identifier><modification operation="addorset"><valueObject xsi:type="subscriber:HLR"><odbr>2</odbr></valueObject></modification><modification operation="addorset"><valueObject xsi:type="subscriber:HLR"><odboc>2</odboc></valueObject></modification><modification operation="setoradd"><valueObject xsi:type="subscriber:ROAMSUBSCRIPTION"><roamSubscriptionInfo>NAT</roamSubscriptionInfo></valueObject></modification></spml:modifyRequest>.
+2018-12-12 16:08:02,221 INFO  [net.rul.parametrization.CurlyBracketsSubstitution] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Aplicando regra de parametrizacao no Elemento de Servico de Rede TrocaChipUdrNokia,NOT_EXECUTED
+2018-12-12 16:08:02,224 INFO  [net.rul.parametrization.CurlyBracketsSubstitution] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Depois Trad: ESR TrocaChipUdrNokia,NOT_EXECUTED: seq=0, comando = <spml:deleteRequest xmlns:spml="urn:siemens:names:prov:gw:SPML:2:0" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><version>SUBSCRIBER_v10</version><objectclass>Subscriber</objectclass><identifier alias="imsi" xsi:type="subscriber:SubscriberIdentifier">724312929894498</identifier></spml:deleteRequest>
+2018-12-12 16:08:02,227 INFO  [net.rul.parametrization.CurlyBracketsSubstitution] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Depois Trad: ESR TrocaChipUdrNokia,NOT_EXECUTED: seq=1, comando = <spml:addRequest returnResultingObject="none" execution="synchronous" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0" xmlns:spml="urn:siemens:names:prov:gw:SPML:2:0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><version>SUBSCRIBER_v10</version><object xsi:type="subscriber:Subscriber"><auc><imsi>724312929894498</imsi><encKey>02E25E287DA4C2F9BE8B55ECDE172FCF</encKey><algoId>1</algoId><kdbId>001</kdbId><acsub>2</acsub></auc></object></spml:addRequest>
+2018-12-12 16:08:02,240 INFO  [net.rul.parametrization.CurlyBracketsSubstitution] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Depois Trad: ESR TrocaChipUdrNokia,NOT_EXECUTED: seq=2, comando = <spml:changeIdRequest returnResultingObject="none" xmlns:spml="urn:siemens:names:prov:gw:SPML:2:0" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0"><version>SUBSCRIBER_v10</version><objectclass>Subscriber</objectclass><oldId alias="imsi" xsi:type="subscriber:SubscriberSwapIdentifier" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">724312922881739</oldId><newId alias="imsi" xsi:type="subscriber:SubscriberSwapIdentifier" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">724312929894498</newId></spml:changeIdRequest>
+2018-12-12 16:08:02,242 INFO  [net.rul.parametrization.CurlyBracketsSubstitution] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Depois Trad: ESR TrocaChipUdrNokia,NOT_EXECUTED: seq=3, comando = <spml:deleteRequest xmlns:spml="urn:siemens:names:prov:gw:SPML:2:0" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><version>SUBSCRIBER_v10</version><objectclass>Subscriber</objectclass><identifier alias="imsi" xsi:type="subscriber:SubscriberIdentifier">724312922881739</identifier></spml:deleteRequest>
+2018-12-12 16:08:02,246 INFO  [net.rul.parametrization.CurlyBracketsSubstitution] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Depois Trad: ESR TrocaChipUdrNokia,NOT_EXECUTED: seq=4, comando = <spml:modifyRequest returnResultingObject="none" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0" xmlns:spml="urn:siemens:names:prov:gw:SPML:2:0"><version>SUBSCRIBER_v10</version><objectclass>Subscriber</objectclass><identifier alias="imsi" xsi:type="subscriber:SubscriberIdentifier">724312929894498</identifier><modification operation="addorset"><valueObject xsi:type="subscriber:HLR"><csFallback><mtrr>true</mtrr></csFallback></valueObject></modification></spml:modifyRequest>
+2018-12-12 16:08:02,256 INFO  [net.rul.parametrization.CurlyBracketsSubstitution] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Depois Trad: ESR TrocaChipUdrNokia,NOT_EXECUTED: seq=5, comando = <spml:modifyRequest returnResultingObject="none" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0" xmlns:spml="urn:siemens:names:prov:gw:SPML:2:0"><version>SUBSCRIBER_v10</version><objectclass>Subscriber</objectclass><identifier alias="imsi" xsi:type="subscriber:SubscriberIdentifier">724312929894498</identifier><modification operation="addorset"><valueObject xsi:type="subscriber:HLR"><odbr>2</odbr></valueObject></modification><modification operation="addorset"><valueObject xsi:type="subscriber:HLR"><odboc>2</odboc></valueObject></modification><modification operation="setoradd"><valueObject xsi:type="subscriber:ROAMSUBSCRIPTION"><roamSubscriptionInfo>NAT</roamSubscriptionInfo></valueObject></modification></spml:modifyRequest>
+2018-12-12 16:08:02,256 INFO  [net.rul.commandexecution.DefaultExecution] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Aplicando regra de execucao de comandos no ESR TrocaChipUdrNokia,NOT_EXECUTED
+2018-12-12 16:08:02,256 INFO  [net.wfl.AdapterCommunicator] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Comando enviado para o adaptador MockAdapter.
+2018-12-12 16:08:02,276 INFO  [net.rul.commandexecution.DefaultExecution] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] ESR RemoverAssinanteTrocaChipSmartKeyHuawei: resposta bruta=<?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><RMV_USRResponse xmlns="http://www.huawei.com/AXIS/SmartKey"><Result><ResultCode>0</ResultCode><ResultDesc>success</ResultDesc></Result></RMV_USRResponse></soapenv:Body></soapenv:Envelope> comando:<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:smar="http://www.huawei.com/AXIS/SmartKey"><soapenv:Header /><soapenv:Body><smar:RMV_USR><USERNAME>{username}</USERNAME><PASSWORD>{password}</PASSWORD><Number>5541984006452</Number><IMSI></IMSI></smar:RMV_USR></soapenv:Body></soapenv:Envelope>, seq=0, tipoResp:Success, traducao:Executado com Sucesso.
+2018-12-12 16:08:02,278 INFO  [net.wfl.AdapterCommunicator] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] Comando enviado para o adaptador soap.Lsms02Adapter.
+2018-12-12 16:08:02,292 INFO  [net.rul.commandexecution.DefaultExecution] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] ESR TrocaChipUdrNokia: resposta bruta=%errorCode="3503"%result="failure"% comando:<spml:deleteRequest xmlns:spml="urn:siemens:names:prov:gw:SPML:2:0" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><version>SUBSCRIBER_v10</version><objectclass>Subscriber</objectclass><identifier alias="imsi" xsi:type="subscriber:SubscriberIdentifier">724312929894498</identifier></spml:deleteRequest>, seq=0, tipoResp:Success, traducao:Sucesso.
+2018-12-12 16:08:02,294 INFO  [net.wfl.AdapterCommunicator] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Comando enviado para o adaptador MockAdapter.
+2018-12-12 16:08:02,305 INFO  [net.rul.commandexecution.DefaultExecution] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] ESR RemoverAssinanteTrocaChipSmartKeyHuawei: resposta bruta=<?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><RMV_USRResponse xmlns="http://www.huawei.com/AXIS/SmartKey"><Result><ResultCode>0</ResultCode><ResultDesc>success</ResultDesc></Result></RMV_USRResponse></soapenv:Body></soapenv:Envelope> comando:<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:smar="http://www.huawei.com/AXIS/SmartKey"><soapenv:Header /><soapenv:Body><smar:RMV_USR><USERNAME>{username}</USERNAME><PASSWORD>{password}</PASSWORD><Number></Number><IMSI>724312922881739</IMSI></smar:RMV_USR></soapenv:Body></soapenv:Envelope>, seq=1, tipoResp:Success, traducao:Executado com Sucesso.
+2018-12-12 16:08:02,308 INFO  [net.wfl.AdapterCommunicator] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] Comando enviado para o adaptador soap.Lsms02Adapter.
+2018-12-12 16:08:02,308 INFO  [net.rul.commandexecution.DefaultExecution] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] ESR TrocaChipUdrNokia: resposta bruta=%errorCode="3504"%result="failure"% comando:<spml:addRequest returnResultingObject="none" execution="synchronous" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0" xmlns:spml="urn:siemens:names:prov:gw:SPML:2:0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><version>SUBSCRIBER_v10</version><object xsi:type="subscriber:Subscriber"><auc><imsi>724312929894498</imsi><encKey>02E25E287DA4C2F9BE8B55ECDE172FCF</encKey><algoId>1</algoId><kdbId>001</kdbId><acsub>2</acsub></auc></object></spml:addRequest>, seq=1, tipoResp:Success, traducao:Sucesso.
+2018-12-12 16:08:02,309 INFO  [net.wfl.AdapterCommunicator] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Comando enviado para o adaptador MockAdapter.
+2018-12-12 16:08:02,333 INFO  [net.rul.commandexecution.DefaultExecution] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] ESR RemoverAssinanteTrocaChipSmartKeyHuawei: resposta bruta=<?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><RMV_USRResponse xmlns="http://www.huawei.com/AXIS/SmartKey"><Result><ResultCode>0</ResultCode><ResultDesc>success</ResultDesc></Result></RMV_USRResponse></soapenv:Body></soapenv:Envelope> comando:<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:smar="http://www.huawei.com/AXIS/SmartKey"><soapenv:Header /><soapenv:Body><smar:RMV_USR><USERNAME>{username}</USERNAME><PASSWORD>{password}</PASSWORD><Number></Number><IMSI>724312929894498</IMSI></smar:RMV_USR></soapenv:Body></soapenv:Envelope>, seq=2, tipoResp:Success, traducao:Executado com Sucesso.
+2018-12-12 16:08:02,333 INFO  [net.rul.commandexecution.DefaultExecution] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] ESR TrocaChipUdrNokia: resposta bruta=%result="success"% comando:<spml:changeIdRequest returnResultingObject="none" xmlns:spml="urn:siemens:names:prov:gw:SPML:2:0" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0"><version>SUBSCRIBER_v10</version><objectclass>Subscriber</objectclass><oldId alias="imsi" xsi:type="subscriber:SubscriberSwapIdentifier" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">724312922881739</oldId><newId alias="imsi" xsi:type="subscriber:SubscriberSwapIdentifier" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">724312929894498</newId></spml:changeIdRequest>, seq=2, tipoResp:Success, traducao:Sucesso.
+2018-12-12 16:08:02,339 INFO  [net.wfl.AdapterCommunicator] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Comando enviado para o adaptador MockAdapter.
+2018-12-12 16:08:02,341 INFO  [net.rul.commandexecution.DefaultExecution] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] ESR TrocaChipUdrNokia: resposta bruta=%errorCode="3503"%result="failure"% comando:<spml:deleteRequest xmlns:spml="urn:siemens:names:prov:gw:SPML:2:0" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><version>SUBSCRIBER_v10</version><objectclass>Subscriber</objectclass><identifier alias="imsi" xsi:type="subscriber:SubscriberIdentifier">724312922881739</identifier></spml:deleteRequest>, seq=3, tipoResp:Success, traducao:Sucesso.
+2018-12-12 16:08:02,341 INFO  [net.wfl.AdapterCommunicator] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Comando enviado para o adaptador MockAdapter.
+2018-12-12 16:08:02,349 INFO  [net.rul.commandexecution.DefaultExecution] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] ESR TrocaChipUdrNokia: resposta bruta=%result="success"% comando:<spml:modifyRequest returnResultingObject="none" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0" xmlns:spml="urn:siemens:names:prov:gw:SPML:2:0"><version>SUBSCRIBER_v10</version><objectclass>Subscriber</objectclass><identifier alias="imsi" xsi:type="subscriber:SubscriberIdentifier">724312929894498</identifier><modification operation="addorset"><valueObject xsi:type="subscriber:HLR"><csFallback><mtrr>true</mtrr></csFallback></valueObject></modification></spml:modifyRequest>, seq=4, tipoResp:Success, traducao:Sucesso.
+2018-12-12 16:08:02,349 INFO  [net.wfl.AdapterCommunicator] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Comando enviado para o adaptador MockAdapter.
+2018-12-12 16:08:02,364 INFO  [net.rul.commandexecution.DefaultExecution] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] ESR TrocaChipUdrNokia: resposta bruta=%result="success"% comando:<spml:modifyRequest returnResultingObject="none" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0" xmlns:spml="urn:siemens:names:prov:gw:SPML:2:0"><version>SUBSCRIBER_v10</version><objectclass>Subscriber</objectclass><identifier alias="imsi" xsi:type="subscriber:SubscriberIdentifier">724312929894498</identifier><modification operation="addorset"><valueObject xsi:type="subscriber:HLR"><odbr>2</odbr></valueObject></modification><modification operation="addorset"><valueObject xsi:type="subscriber:HLR"><odboc>2</odboc></valueObject></modification><modification operation="setoradd"><valueObject xsi:type="subscriber:ROAMSUBSCRIPTION"><roamSubscriptionInfo>NAT</roamSubscriptionInfo></valueObject></modification></spml:modifyRequest>, seq=5, tipoResp:Success, traducao:Sucesso.
+2018-12-12 16:08:02,390 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] OUT- RemoverAssinanteTrocaChipSmartKeyHuawei: dest=distribuidor:
+2018-12-12 16:08:02,394 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] ExternalId=CN02_CT02
+2018-12-12 16:08:02,394 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] Elemento=RemoverAssinanteTrocaChipSmartKeyHuawei
+2018-12-12 16:08:02,394 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] Parametros={PARM2=895531292990106457, PARM3=724312929894498, Action=Instalar, PRE=POS, OCCF_UDR=5541984952057, MSISDN=5541984006452, PARM1=895531292997125898, AC_SUB=2, ALG_ID=1, GTT=90, TipoDeAutenticacao=1, PARM4=00102E25E287DA4C2F9BE8B55ECDE172FCF, GTHLR=550310002015, HLR=29, MSISDNNOVO=55, OPERATOR_SERVICE_NAME=S07DFE, NewRoute=99999, TipoDeAutenticacaoAntiga=1, NovoKI=00102E25E287DA4C2F9BE8B55ECDE172FCF, IMSI=724312929894498, KI=001E64A746F5603475CBEF6C9E84C5ED286, QOSP_UDR=DADOS-04, CHARG_UDR=normal, KEY_ID=001, ESBTipoOS=Online, ESBIdElementoSiebel=1-1AUOCX44, KI_ENCRYPT=02E25E287DA4C2F9BE8B55ECDE172FCF, NumberType=4, GTT_OS=04, ROU_UDR=100, IMSINOVO=724312929894498, TipoAutenticacao=1, IMSIAntigo=724312922881739, HLRAntigo=29}
+2018-12-12 16:08:02,394 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] Execucao do ultimo comando: 2018-12-12 16:08:02
+2018-12-12 16:08:02,394 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] Tipo: Success
+2018-12-12 16:08:02,394 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] Descricao: Executado com Sucesso
+2018-12-12 16:08:02,394 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0] respBruta: <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><RMV_USRResponse xmlns="http://www.huawei.com/AXIS/SmartKey"><Result><ResultCode>0</ResultCode><ResultDesc>success</ResultDesc></Result></RMV_USRResponse></soapenv:Body></soapenv:Envelope>
+2018-12-12 16:08:02,423 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] OUT- TrocaChipUdrNokia: dest=distribuidor:
+2018-12-12 16:08:02,423 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] ExternalId=CN02_CT02
+2018-12-12 16:08:02,423 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Elemento=TrocaChipUdrNokia
+2018-12-12 16:08:02,424 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Parametros={PARM2=895531292990106457, PARM3=724312929894498, Action=Instalar, PRE=POS, OCCF_UDR=5541984952057, MSISDN=5541984006452, PARM1=895531292997125898, AC_SUB=2, ALG_ID=1, GTT=90, TipoDeAutenticacao=1, PARM4=00102E25E287DA4C2F9BE8B55ECDE172FCF, GTHLR=550310002015, HLR=29, MSISDNNOVO=55, OPERATOR_SERVICE_NAME=S07DFE, NewRoute=99999, TipoDeAutenticacaoAntiga=1, NovoKI=00102E25E287DA4C2F9BE8B55ECDE172FCF, IMSI=724312929894498, KI=001E64A746F5603475CBEF6C9E84C5ED286, QOSP_UDR=DADOS-04, CHARG_UDR=normal, KEY_ID=001, ESBTipoOS=Online, ESBIdElementoSiebel=1-1AUOCX44, KI_ENCRYPT=02E25E287DA4C2F9BE8B55ECDE172FCF, NumberType=4, GTT_OS=04, ROU_UDR=100, IMSINOVO=724312929894498, TipoAutenticacao=1, IMSIAntigo=724312922881739, HLRAntigo=29}
+2018-12-12 16:08:02,424 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Execucao do ultimo comando: 2018-12-12 16:08:02
+2018-12-12 16:08:02,424 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Tipo: Success
+2018-12-12 16:08:02,424 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] Descricao: Sucesso
+2018-12-12 16:08:02,424 INFO  [net.wfl.OnlineController] [OS9bd3d527.E0 SEQ0.E0 P sisserver.UDR02.0] respBruta: %result="success"%
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Adaptador
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+2018-12-12 16:08:02,206 INFO  [net.adp.soap.Lsms02Adapter] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0 192.168.0.243:7005] OUT: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:smar="http://www.huawei.com/AXIS/SmartKey">
+    <soapenv:Header />
+    <soapenv:Body>
+        <smar:RMV_USR>
+            <USERNAME>{username}</USERNAME>
+            <PASSWORD>{password}</PASSWORD>
+            <Number>5541984006452</Number>
+            <IMSI></IMSI>
+        </smar:RMV_USR>
+    </soapenv:Body>
+</soapenv:Envelope>.
+2018-12-12 16:08:02,206 INFO  [net.adp.soap.SoapAdapter] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0 192.168.0.243:7005] Conectando a plataforma SOAP.
+2018-12-12 16:08:02,207 INFO  [net.adp.soap.SoapAdapter] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0 192.168.0.243:7005] Obtendo conexao SOAP.
+2018-12-12 16:08:02,236 INFO  [net.adp.soap.Lsms02Adapter] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0 192.168.0.243:7005] IN: <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><RMV_USRResponse xmlns="http://www.huawei.com/AXIS/SmartKey"><Result><ResultCode>0</ResultCode><ResultDesc>success</ResultDesc></Result></RMV_USRResponse></soapenv:Body></soapenv:Envelope> COMANDO: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:smar="http://www.huawei.com/AXIS/SmartKey">
+    <soapenv:Header />
+    <soapenv:Body>
+        <smar:RMV_USR>
+            <USERNAME>{username}</USERNAME>
+            <PASSWORD>{password}</PASSWORD>
+            <Number>5541984006452</Number>
+            <IMSI></IMSI>
+        </smar:RMV_USR>
+    </soapenv:Body>
+</soapenv:Envelope> TEMPO DE EXECUCAO: 30 ms.
+2018-12-12 16:08:02,279 INFO  [net.adp.soap.Lsms02Adapter] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0 192.168.0.243:7005] OUT: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:smar="http://www.huawei.com/AXIS/SmartKey">
+    <soapenv:Header />
+    <soapenv:Body>
+        <smar:RMV_USR>
+            <USERNAME>{username}</USERNAME>
+            <PASSWORD>{password}</PASSWORD>
+            <Number></Number>
+            <IMSI>724312922881739</IMSI>
+        </smar:RMV_USR>
+    </soapenv:Body>
+</soapenv:Envelope>.
+2018-12-12 16:08:02,279 INFO  [net.adp.soap.SoapAdapter] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0 192.168.0.243:7005] Conectando a plataforma SOAP.
+2018-12-12 16:08:02,279 INFO  [net.adp.soap.SoapAdapter] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0 192.168.0.243:7005] Obtendo conexao SOAP.
+2018-12-12 16:08:02,292 INFO  [net.adp.soap.Lsms02Adapter] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0 192.168.0.243:7005] IN: <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><RMV_USRResponse xmlns="http://www.huawei.com/AXIS/SmartKey"><Result><ResultCode>0</ResultCode><ResultDesc>success</ResultDesc></Result></RMV_USRResponse></soapenv:Body></soapenv:Envelope> COMANDO: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:smar="http://www.huawei.com/AXIS/SmartKey">
+    <soapenv:Header />
+    <soapenv:Body>
+        <smar:RMV_USR>
+            <USERNAME>{username}</USERNAME>
+            <PASSWORD>{password}</PASSWORD>
+            <Number></Number>
+            <IMSI>724312922881739</IMSI>
+        </smar:RMV_USR>
+    </soapenv:Body>
+</soapenv:Envelope> TEMPO DE EXECUCAO: 13 ms.
+2018-12-12 16:08:02,308 INFO  [net.adp.soap.Lsms02Adapter] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0 192.168.0.243:7005] OUT: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:smar="http://www.huawei.com/AXIS/SmartKey">
+    <soapenv:Header />
+    <soapenv:Body>
+        <smar:RMV_USR>
+            <USERNAME>{username}</USERNAME>
+            <PASSWORD>{password}</PASSWORD>
+            <Number></Number>
+            <IMSI>724312929894498</IMSI>
+        </smar:RMV_USR>
+    </soapenv:Body>
+</soapenv:Envelope>.
+2018-12-12 16:08:02,308 INFO  [net.adp.soap.SoapAdapter] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0 192.168.0.243:7005] Conectando a plataforma SOAP.
+2018-12-12 16:08:02,308 INFO  [net.adp.soap.SoapAdapter] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0 192.168.0.243:7005] Obtendo conexao SOAP.
+2018-12-12 16:08:02,321 INFO  [net.adp.soap.Lsms02Adapter] [OS9bd3d527.E0 SEQ1.E0 P sisserver.LSMS01.0 192.168.0.243:7005] IN: <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><RMV_USRResponse xmlns="http://www.huawei.com/AXIS/SmartKey"><Result><ResultCode>0</ResultCode><ResultDesc>success</ResultDesc></Result></RMV_USRResponse></soapenv:Body></soapenv:Envelope> COMANDO: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:smar="http://www.huawei.com/AXIS/SmartKey">
+    <soapenv:Header />
+    <soapenv:Body>
+        <smar:RMV_USR>
+            <USERNAME>{username}</USERNAME>
+            <PASSWORD>{password}</PASSWORD>
+            <Number></Number>
+            <IMSI>724312929894498</IMSI>
+        </smar:RMV_USR>
+    </soapenv:Body>
+</soapenv:Envelope> TEMPO DE EXECUCAO: 13 ms.
+

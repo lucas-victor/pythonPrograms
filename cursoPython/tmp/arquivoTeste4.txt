@@ -1,0 +1,2 @@
+Essa é primeira linha escrita no arquivo 
+essa é a segunda linha escrita no arquivo.essa era pra ser a terceira linha escrita no arquivo, mas não é.

@@ -12,13 +12,13 @@ import os, sys
 #uma maneira diferente de escrever no arquivo.
 
 '''escrevendo no arquivo.'''
-with open('./tmp/arquivoTeste.txt', 'w+') as arquivo:
+with open('./tmp/arquivoTeste3.txt', 'w+') as arquivo:
     arquivo.write('Essa é primeira linha escrita no arquivo \n')
     arquivo.write('essa é a segunda linha escrita no arquivo.')
     arquivo.write('essa era pra ser a terceira linha escrita no arquivo, mas não é.')
 
 '''lendo o arquivo'''
-with open('./tmp/arquivoTeste.txt', 'r+') as arquivo:
+with open('./tmp/arquivoTeste3.txt', 'r+') as arquivo:
     print(arquivo.read())
 
 
@@ -30,5 +30,5 @@ input('Pressione enter para sair.')
 Uma forma de escrever no final do arquivo é abrindo ele no modo "a". Vejamos o exemplo: 
 '''
 
-#with open('./tmp/arquivoTeste.txt', 'a+') as arquivo2:
+#with open('./tmp/arquivoTeste3.txt', 'a+') as arquivo2:
 
